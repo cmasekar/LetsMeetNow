@@ -7,19 +7,18 @@
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
-    Height="60"
-    d:DesignHeight="480" d:DesignWidth="480">
+    Height="70">
     
     <Grid Background="DarkMagenta">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="70"/>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="70"/>
         </Grid.ColumnDefinitions>
         <Button Grid.Column="0" Opacity="0"/>
-        <Image Grid.Column="0" Margin="8" Source="../Assets/Bars.png" />
+        <Image Grid.Column="0" Margin="{StaticResource PhoneMargin}" Source="../Assets/Bars.png" />
         <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Lets Meet Now" FontFamily="{StaticResource PhoneFontFamilySemiBold}" Foreground="White" FontSize="{StaticResource PhoneFontSizeExtraLarge}"/>
         <Button Grid.Column="2" Opacity="0"/>
-        <Image Grid.Column="2" Margin="8" Source="../Assets/ChatIcon.png"/>
+        <Image Grid.Column="2" Margin="{StaticResource PhoneMargin}" Source="../Assets/ChatIcon.png"/>
     </Grid>
 </UserControl>

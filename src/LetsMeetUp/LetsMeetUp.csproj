@@ -104,7 +104,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\User.cs" />
+    <Compile Include="ViewModel\DummyUser.cs" />
+    <Compile Include="View\MessageBar.xaml.cs">
+      <DependentUpon>MessageBar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\OptionsBar.xaml.cs">
       <DependentUpon>OptionsBar.xaml</DependentUpon>
     </Compile>
@@ -118,6 +121,10 @@
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
     <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MessageBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -144,6 +151,10 @@
     </Content>
     <Content Include="Assets\Bars.png" />
     <Content Include="Assets\ChatIcon.png" />
+    <Content Include="Assets\Chirag.jpg" />
+    <Content Include="Assets\Jon.jpg" />
+    <Content Include="Assets\Lisa.jpg" />
+    <Content Include="Assets\Lizzy.jpg" />
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -159,6 +170,7 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Tyler.jpg" />
     <Content Include="README_FIRST.txt" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
