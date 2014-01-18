@@ -15,10 +15,14 @@
             <ColumnDefinition Width="200"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+        <Button Grid.ColumnSpan ="2" Opacity="0"/>
         <StackPanel Grid.Column="1">
-            <StackPanel>
-                
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="FName"/>
+                <TextBlock Text=", "/>
+                <TextBlock Text="Age"/>
             </StackPanel>
+            <TextBlock TextWrapping="Wrap" TextTrimming="WordEllipsis"/>
         </StackPanel>
     </Grid>
 </UserControl>
