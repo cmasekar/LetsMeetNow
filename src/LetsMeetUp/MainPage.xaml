@@ -14,32 +14,40 @@
     SupportedOrientations="Portrait" Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 
-    <Grid Background="White">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="auto"/>
-        </Grid.RowDefinitions>
-        <View:OptionsBar Grid.Row="0"/>
-        <ScrollViewer Grid.Row="1">
-            <StackPanel>
-                <Line Stretch="Fill" Stroke="#7FD3D3D3" X2="1"/>
-                <ItemsControl ItemsSource="{Binding Path=DummyUsers, Source={StaticResource ResourceKey=StaticResources}}">
-                    <ItemsControl.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <StackPanel/>
-                        </ItemsPanelTemplate>
-                    </ItemsControl.ItemsPanel>
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <View:OtherUser/>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-                <Line Stretch="Fill" Stroke="#7FD3D3D3" X2="1"/>
-            </StackPanel>
-        </ScrollViewer>
-        <View:MessageBar Grid.Row="2"/>
-    </Grid>
+    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+        <Grid Margin="{StaticResource PhoneMargin}">
+            <Button/>
+        </Grid>
+        <Grid Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <View:OptionsBar Grid.Row="0"/>
+            <ScrollViewer Grid.Row="1">
+                <StackPanel>
+                    <Line Stretch="Fill" Stroke="#7FD3D3D3" X2="1"/>
+                    <ItemsControl ItemsSource="{Binding Path=DummyUsers, Source={StaticResource ResourceKey=StaticResources}}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <View:OtherUser/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                    <Line Stretch="Fill" Stroke="#7FD3D3D3" X2="1"/>
+                </StackPanel>
+            </ScrollViewer>
+            <View:MessageBar Grid.Row="2"/>
+        </Grid>
+        <Grid Margin="{StaticResource PhoneMargin}">
+            <Button/>
+        </Grid>
+    </StackPanel>
 
 </phone:PhoneApplicationPage>

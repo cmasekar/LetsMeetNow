@@ -6,12 +6,13 @@
     mc:Ignorable="d"
     Height="70">
 
-    <Grid Background="DarkMagenta">
+    <Grid Background="DeepPink">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition Width="70"/>
         </Grid.ColumnDefinitions>
-        <TextBox Grid.Column="0" Background="White"/>
+        <TextBox Grid.Column="0" BorderBrush="White" Background="White"/>
+        <Image Grid.Column="1" Source="../Toolkit.Content/ApplicationBar.Check.png"/>
         <Button Grid.Column="1"/>
     </Grid>
 </UserControl>
