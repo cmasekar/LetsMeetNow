@@ -7,7 +7,7 @@
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
-    Height="50"
+    Height="60"
     d:DesignHeight="480" d:DesignWidth="480">
     
     <Grid Background="DarkMagenta">
@@ -18,7 +18,7 @@
         </Grid.ColumnDefinitions>
         <Button Grid.Column="0" Opacity="0"/>
         <Image Grid.Column="0" Margin="8" Source="../Assets/Bars.png" />
-        <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Lets Meet Now" FontFamily="Calibri" FontWeight="Bold" Foreground="White" FontSize="42"/>
+        <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Lets Meet Now" FontFamily="{StaticResource PhoneFontFamilySemiBold}" Foreground="White" FontSize="{StaticResource PhoneFontSizeExtraLarge}"/>
         <Button Grid.Column="2" Opacity="0"/>
         <Image Grid.Column="2" Margin="8" Source="../Assets/ChatIcon.png"/>
     </Grid>

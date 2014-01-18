@@ -6,23 +6,24 @@
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
-    Foreground="{StaticResource PhoneForegroundBrush}"
-    Height="200"
-    d:DesignHeight="480" d:DesignWidth="480">
-    
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Button Grid.ColumnSpan ="2" Opacity="0"/>
-        <StackPanel Grid.Column="1">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="FName"/>
-                <TextBlock Text=", "/>
-                <TextBlock Text="Age"/>
+    Foreground="Black"
+    Height="175">
+
+    <Border BorderBrush="Black" BorderThickness="1">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="175"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.ColumnSpan ="2" Opacity="0"/>
+            <Image Grid.Column="0"/>
+            <StackPanel Margin="{StaticResource PhoneMargin}" Grid.Column="1">
+                <Grid>
+                    <TextBlock FontSize="{StaticResource PhoneFontSizeLarge}" FontFamily="{StaticResource PhoneFontFamilySemiBold}" Text="{Binding Path=FirstName}" />
+                    <TextBlock Foreground="Gray" HorizontalAlignment="Right" FontSize="{StaticResource PhoneFontSizeLarge}" FontFamily="{StaticResource PhoneFontFamilySemiBold}" Text="{Binding Path=Age}"/>
+                </Grid>
+                <TextBlock FontSize="{StaticResource PhoneFontSizeMediumLarge}" Text="{Binding Path=TagLine}" TextWrapping="Wrap" TextTrimming="WordEllipsis"/>
             </StackPanel>
-            <TextBlock TextWrapping="Wrap" TextTrimming="WordEllipsis"/>
-        </StackPanel>
-    </Grid>
+        </Grid>
+    </Border>
 </UserControl>
