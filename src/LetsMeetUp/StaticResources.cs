@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using LetsMeetUp.ViewModel;
 
 namespace LetsMeetUp
@@ -19,5 +20,7 @@ namespace LetsMeetUp
         };
         
         public List<DummyUser> DummyUsers { get { return _dummyUsers; } }
+
+        public double ScreenWidth { get { return Application.Current.Host.Content.ActualWidth; } }
     }
 }

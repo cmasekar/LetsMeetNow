@@ -6,9 +6,17 @@
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
-    Foreground="{StaticResource PhoneForegroundBrush}">
-    
-    <Grid>
-        
-    </Grid>
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    Height="100">
+
+    <Border BorderBrush="#7FD3D3D3" BorderThickness="1">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Source="{Binding Path=ImagePath}"/>
+            <TextBlock Margin="{StaticResource PhoneMargin}" FontSize="{StaticResource PhoneFontSizeLarge}" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Text="{Binding Path=FirstName}"/>
+        </Grid>
+    </Border>
 </UserControl>

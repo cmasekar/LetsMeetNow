@@ -4,18 +4,41 @@ using System.Linq;
 using System.Net;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using System.Windows.Media.Animation;
 
 namespace LetsMeetUp
 {
     public partial class MainPage : PhoneApplicationPage
     {
+        public static readonly DependencyProperty OptionsCommandProperty = DependencyProperty.Register("OptionsCommand", typeof(ICommand), typeof(MainPage), new PropertyMetadata(null));
+        public static readonly DependencyProperty ChatCommandProperty = DependencyProperty.Register("ChatCommand", typeof(ICommand), typeof(MainPage), new PropertyMetadata(null));
+
+        public ICommand OptionsCommand
+        {
+            get { return (ICommand)GetValue(OptionsCommandProperty); }
+            set { SetValue(OptionsCommandProperty, value); }
+        }
+
+        public ICommand ChatCommand
+        {
+            get { return (ICommand)GetValue(ChatCommandProperty); }
+            set { SetValue(ChatCommandProperty, value); }
+        }
+        
+        void sadf(object o)
+        {
+            Cntrl.Visibility = System.Windows.Visibility.Collapsed;
+        }
+
         // Constructor
         public MainPage()
         {
             InitializeComponent();
+            OptionsCommand = new DelegateCommand(sadf);
 
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();

@@ -12,13 +12,13 @@
     <Grid Background="DeepPink">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="70"/>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition/>
             <ColumnDefinition Width="70"/>
         </Grid.ColumnDefinitions>
-        <Button Grid.Column="0" Opacity="0"/>
-        <Image Grid.Column="0" Margin="{StaticResource PhoneMargin}" Source="../Assets/Bars.png" />
+        <Button Grid.Column="0" Opacity="0" Command="{Binding OptionsCommand, RelativeSource={RelativeSource Self}}"/>
+        <Image Grid.Column="0" Margin="{StaticResource PhoneMargin}" Source="../Assets/Bars.png"/>
         <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Let's Meet Now" FontFamily="{StaticResource PhoneFontFamilySemiBold}" Foreground="White" FontSize="{StaticResource PhoneFontSizeExtraLarge}"/>
-        <Button Grid.Column="2" Opacity="0"/>
+        <Button Grid.Column="2" Opacity="0" Command="{Binding ChatCommand, RelativeSource={RelativeSource Self}}"/>
         <Image Grid.Column="2" Margin="{StaticResource PhoneMargin}" Source="../Assets/ChatIcon.png"/>
     </Grid>
 </UserControl>
